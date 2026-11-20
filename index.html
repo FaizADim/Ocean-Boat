@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Ocean Cleanup Boat</title>
+  <style>
+    body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; background: #90e0ef; }
+    #ui {
+      position: absolute; top: 20px; left: 20px; color: #fff; font-size: 20px;
+      font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.7); pointer-events: none;
+    }
+    #alert {
+      position: absolute; top: 20px; right: 20px; color: #ffccd5; font-size: 20px;
+      font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); opacity: 0; transition: opacity 0.2s;
+    }
+    #gameover {
+      display: none; position: absolute; inset: 0; background: rgba(0, 29, 61, 0.85);
+      color: white; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+    }
+    button {
+      margin-top: 15px; padding: 12px 24px; font-size: 18px; font-weight: bold;
+      background: #00b4d8; color: white; border: none; border-radius: 6px; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="ui">
+    Trash Skimmed: <span id="score">0</span> | Time: <span id="timer">60</span>s<br>
+    <small style="font-size:14px;">WASD / Arrows to drive. Avoid dark oil spills &amp; sea turtles!</small>
+  </div>
+  <div id="alert">Watch out for Sea Turtles! (-2 pts)</div>
+  <div id="gameover">
+    <h1 style="font-size: 44px; margin: 0;">PATROL COMPLETE!</h1>
+    <p id="final-stats" style="font-size: 22px;"></p>
+    <button onclick="resetGame()">Sail Again</button>
+  </div>
+  <canvas id="c"></canvas>
+  <script src="game.js"></script>
+</body>
+</html>
