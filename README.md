@@ -1,7 +1,7 @@
 # 3D Ocean Cleanup Boat
 
 A browser-based 3D ocean cleanup game built with HTML, CSS, and vanilla JavaScript. Pilot a cleanup boat, skim floating trash, and avoid oil spills and sea turtles before the 60-second patrol ends.
-
+[!Watch the Demo](https://www.youtube.com/watch?v=AEF3YOOhDbc)
 ## Gameplay
 
 - Drive the boat around the ocean to collect floating trash.
